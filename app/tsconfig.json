@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "es6",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "forceConsistentCasingInFileNames": false,
+    "noImplicitAny": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "jsx": "react",
+    "noEmitOnError": true,
+    "outDir": "dist/",
+    "lib": ["es5", "dom", "es2015.core", "es2015.promise", "es2015.collection", "es2015.iterable"],
+    "types": [
+      "node"
+    ]
+  },
+  "include": [
+    "modules/**/*.d.ts",
+    "modules/dashboard/dashboard.module.ts",
+    "modules/dashboard/dashboard-desktop.module.ts",
+    "modules/dashboard/mobile/dashboard-mobile.module.ts",
+    "modules/settingsNew/settings-new.module.ts",
+    "modules/widget/widget.module.ts"
+  ],
+  "compileOnSave": false
+}
