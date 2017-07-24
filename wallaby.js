@@ -1,4 +1,8 @@
-module.exports = function () {
+module.exports = function (wallaby) {
+
+	var compilerOptions = Object.assign(
+		require('./app/tsconfig.json').compilerOptions,
+		require('./app/tsconfig.spec.json').compilerOptions);
 
 	return {
 		files: [
@@ -10,6 +14,10 @@ module.exports = function () {
 		],
 
 		tests: ['app/**/*.spec.ts'],
+
+		compilers: {
+			'**/*.ts': wallaby.compilers.typeScript(compilerOptions)
+		},
 
 		env: {
 			type: 'node',
